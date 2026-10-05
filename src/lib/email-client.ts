@@ -1,0 +1,1 @@
+export const sendWelcomeEmail=async(..._args:any[])=>({sent:false});export const sendBookingConfirmation=async(..._args:any[])=>({sent:false});export const sendPasswordResetEmail=async(..._args:any[])=>({sent:false});

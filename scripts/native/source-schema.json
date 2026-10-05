@@ -1,0 +1,560 @@
+{
+  "academy": {
+    "business_hours": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "capacity_per_class": {
+      "type": "number | null",
+      "optional": true
+    },
+    "cnpj": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cor_primaria": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "endereco": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "logo_url": {
+      "type": "string | null",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "owner_email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "owner_nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "owner_telefone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plano": {
+      "type": "Database[\"public\"][\"Enums\"][\"academy_plan\"]",
+      "optional": true
+    },
+    "slug": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"academy_status\"]",
+      "optional": true
+    },
+    "telefone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "trial_ate": {
+      "type": "string | null",
+      "optional": true
+    },
+    "ultimo_acesso": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    },
+    "valor_mensal": {
+      "type": "number | null",
+      "optional": true
+    }
+  },
+  "academy_user": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "ativo": {
+      "type": "boolean",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "must_change_password": {
+      "type": "boolean",
+      "optional": true
+    },
+    "nome": {
+      "type": "string | null",
+      "optional": true
+    },
+    "role": {
+      "type": "Database[\"public\"][\"Enums\"][\"academy_user_role\"]",
+      "optional": true
+    },
+    "ultimo_login": {
+      "type": "string | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "app_config": {
+    "app_name": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "super_admin_emails": {
+      "type": "string[]",
+      "optional": true
+    },
+    "system_settings": {
+      "type": "Json | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "checkin": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "date": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "modality": {
+      "type": "Database[\"public\"][\"Enums\"][\"class_modality\"] | null",
+      "optional": true
+    },
+    "schedule_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "source": {
+      "type": "Database[\"public\"][\"Enums\"][\"checkin_source\"]",
+      "optional": true
+    },
+    "student_id": {
+      "type": "string",
+      "optional": false
+    },
+    "student_name": {
+      "type": "string | null",
+      "optional": true
+    },
+    "time": {
+      "type": "string",
+      "optional": false
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "financial": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "amount": {
+      "type": "number",
+      "optional": false
+    },
+    "category": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "date": {
+      "type": "string",
+      "optional": false
+    },
+    "description": {
+      "type": "string | null",
+      "optional": true
+    },
+    "due_date": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "payment_method": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"financial_status\"]",
+      "optional": true
+    },
+    "student_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "student_name": {
+      "type": "string | null",
+      "optional": true
+    },
+    "type": {
+      "type": "Database[\"public\"][\"Enums\"][\"financial_type\"]",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "lead": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "modality": {
+      "type": "string | null",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "objetivo": {
+      "type": "string | null",
+      "optional": true
+    },
+    "phone": {
+      "type": "string",
+      "optional": false
+    },
+    "plan_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "schedule_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"lead_status\"]",
+      "optional": true
+    },
+    "type": {
+      "type": "Database[\"public\"][\"Enums\"][\"lead_type\"]",
+      "optional": false
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "plan": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "active": {
+      "type": "boolean",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "description": {
+      "type": "string | null",
+      "optional": true
+    },
+    "duration_months": {
+      "type": "number",
+      "optional": true
+    },
+    "featured": {
+      "type": "boolean",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "included_classes": {
+      "type": "string[] | null",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "price": {
+      "type": "number",
+      "optional": false
+    },
+    "total_checkins": {
+      "type": "number | null",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "schedule": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "active": {
+      "type": "boolean",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "day_of_week": {
+      "type": "number",
+      "optional": false
+    },
+    "end_time": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "instructor_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "instructor_name": {
+      "type": "string | null",
+      "optional": true
+    },
+    "max_capacity": {
+      "type": "number",
+      "optional": true
+    },
+    "modality": {
+      "type": "Database[\"public\"][\"Enums\"][\"class_modality\"] | null",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "start_time": {
+      "type": "string",
+      "optional": false
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "student": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "address": {
+      "type": "string | null",
+      "optional": true
+    },
+    "ativo": {
+      "type": "boolean",
+      "optional": true
+    },
+    "birth_date": {
+      "type": "string | null",
+      "optional": true
+    },
+    "cpf": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string | null",
+      "optional": true
+    },
+    "emergency_contact": {
+      "type": "string | null",
+      "optional": true
+    },
+    "gender": {
+      "type": "Database[\"public\"][\"Enums\"][\"student_gender\"] | null",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "medical_notes": {
+      "type": "string | null",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "payment_status": {
+      "type": "Database[\"public\"][\"Enums\"][\"payment_status\"]",
+      "optional": true
+    },
+    "phone": {
+      "type": "string | null",
+      "optional": true
+    },
+    "photo_url": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plan_end": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plan_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plan_name": {
+      "type": "string | null",
+      "optional": true
+    },
+    "plan_start": {
+      "type": "string | null",
+      "optional": true
+    },
+    "status": {
+      "type": "Database[\"public\"][\"Enums\"][\"student_status\"]",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "team_member": {
+    "academy_id": {
+      "type": "string",
+      "optional": false
+    },
+    "active": {
+      "type": "boolean",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "email": {
+      "type": "string",
+      "optional": false
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "name": {
+      "type": "string",
+      "optional": false
+    },
+    "role": {
+      "type": "Database[\"public\"][\"Enums\"][\"team_role\"]",
+      "optional": true
+    },
+    "updated_at": {
+      "type": "string",
+      "optional": true
+    }
+  },
+  "user_roles": {
+    "academy_id": {
+      "type": "string | null",
+      "optional": true
+    },
+    "created_at": {
+      "type": "string",
+      "optional": true
+    },
+    "id": {
+      "type": "string",
+      "optional": true
+    },
+    "role": {
+      "type": "Database[\"public\"][\"Enums\"][\"app_role\"]",
+      "optional": false
+    },
+    "user_id": {
+      "type": "string",
+      "optional": false
+    }
+  }
+}

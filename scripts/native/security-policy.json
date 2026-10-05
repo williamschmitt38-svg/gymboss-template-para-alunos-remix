@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "defaults": {
+    "require_auth": true
+  },
+  "modules": {
+    "db": {
+      "require_auth": true,
+      "raw_sql": {
+        "allowed": false
+      },
+      "row_level": {
+        "mode": "none",
+        "owner_field": "user_id"
+      },
+      "tables": {
+        "academy": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "academy_user": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "app_config": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "checkin": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "financial": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "lead": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "plan": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "schedule": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "student": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "team_member": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "user_roles": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "profiles": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "template_owner": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "users": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "password_reset_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "magic_link_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "email_verification_tokens": {
+          "read": "deny",
+          "write": "deny"
+        },
+        "_blink_auth": {
+          "read": "deny",
+          "write": "deny"
+        }
+      }
+    }
+  }
+}

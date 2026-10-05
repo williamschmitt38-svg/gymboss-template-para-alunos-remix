@@ -1,0 +1,1 @@
+import{callBackend}from'@/blink/backend';export const createAcademiaWithOwner=async({data}:any):Promise<any>=>callBackend('/api/master/academy',data);export const resetarSenhaAdmin=async(_args:any):Promise<any>=>{throw Error('O titular recupera seu próprio acesso na tela de login.')};
